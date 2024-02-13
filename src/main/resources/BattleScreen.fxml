@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleScreenController">
+   <children>
+      <ImageView fx:id="battleBackground" fitHeight="626.0" fitWidth="939.0" layoutX="-265.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/grassbackground2.png" />
+         </image>
+      </ImageView>
+      <Ellipse fill="#a4b0bc" layoutX="137.0" layoutY="322.0" radiusX="84.0" radiusY="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#a4b0bc" layoutX="479.0" layoutY="214.0" radiusX="84.0" radiusY="31.0" stroke="BLACK" strokeType="INSIDE" />
+      <HBox fx:id="userMoveBox" alignment="BOTTOM_CENTER" layoutX="64.0" layoutY="402.0" prefHeight="25.0" prefWidth="492.0">
+         <children>
+            <Button fx:id="move1Button" mnemonicParsing="false" onAction="#chooseMove" prefHeight="25.0" prefWidth="123.0" text="Move1">
+               <graphic>
+                  <ImageView fx:id="moveImg1" fitHeight="17.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button fx:id="move2Button" mnemonicParsing="false" onAction="#chooseMove" prefHeight="25.0" prefWidth="123.0" text="Move2">
+               <graphic>
+                  <ImageView fx:id="moveImg2" fitHeight="17.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button fx:id="move3Button" mnemonicParsing="false" onAction="#chooseMove" prefHeight="25.0" prefWidth="123.0" text="Move3">
+               <graphic>
+                  <ImageView fx:id="moveImg3" fitHeight="17.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button fx:id="move4Button" mnemonicParsing="false" onAction="#chooseMove" prefHeight="25.0" prefWidth="123.0" text="Move4">
+               <graphic>
+                  <ImageView fx:id="moveImg4" fitHeight="17.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+         </children>
+      </HBox>
+      <HBox fx:id="teamBox" layoutX="6.0" layoutY="2.0" prefHeight="25.0" prefWidth="644.0">
+         <children>
+            <Button fx:id="mon1Button" mnemonicParsing="false" onAction="#swapMonster" prefHeight="23.0" prefWidth="120.0" text="Mon1">
+               <graphic>
+                  <ImageView fx:id="view1" fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="mon2Button" mnemonicParsing="false" onAction="#swapMonster" prefHeight="23.0" prefWidth="120.0" text="Mon2">
+               <graphic>
+                  <ImageView fx:id="view2" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="mon3Button" mnemonicParsing="false" onAction="#swapMonster" prefHeight="23.0" prefWidth="120.0" text="Mon3">
+               <graphic>
+                  <ImageView fx:id="view3" fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="mon4Button" mnemonicParsing="false" onAction="#swapMonster" prefHeight="23.0" prefWidth="120.0" text="Mon4">
+               <graphic>
+                  <ImageView fx:id="view4" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="mon5Button" mnemonicParsing="false" onAction="#swapMonster" prefHeight="23.0" prefWidth="120.0" text="Mon5">
+               <graphic>
+                  <ImageView fx:id="view5" fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button fx:id="mon6Button" mnemonicParsing="false" onAction="#swapMonster" prefHeight="23.0" prefWidth="120.0" text="Mon6">
+               <graphic>
+                  <ImageView fx:id="view6" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fx:id="oppMonView" fitHeight="125.0" fitWidth="120.0" layoutX="419.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="userMonView" fitHeight="125.0" fitWidth="120.0" layoutX="77.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="10.0" layoutX="224.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="10.0" layoutX="224.0" layoutY="277.0" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <Rectangle fx:id="oppHealthBox" arcHeight="15.0" arcWidth="15.0" fill="#27ff1f" height="8.0" layoutX="225.0" layoutY="192.0" stroke="TRANSPARENT" strokeType="INSIDE" width="166.0" />
+      <Label fx:id="userNameLabel" alignment="CENTER" layoutX="224.0" layoutY="260.0" prefHeight="17.0" prefWidth="168.0" text="Label" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="oppNameLabel" alignment="CENTER" layoutX="224.0" layoutY="169.0" prefHeight="17.0" prefWidth="168.0" text="Label" textAlignment="CENTER" textFill="WHITE" />
+      <Rectangle fx:id="userHealthBox" arcHeight="15.0" arcWidth="15.0" fill="#27ff1f" height="8.0" layoutX="225.0" layoutY="278.0" stroke="TRANSPARENT" strokeType="INSIDE" width="166.0" />
+      <Label fx:id="oppHealthPercent" alignment="CENTER_RIGHT" layoutX="175.0" layoutY="169.0" prefHeight="17.0" prefWidth="44.0" text="100%" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="userHealthPercent" layoutX="397.0" layoutY="268.0" prefHeight="17.0" prefWidth="44.0" text="100%" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="oppHealth" alignment="CENTER_RIGHT" layoutX="153.0" layoutY="183.0" prefHeight="17.0" prefWidth="66.0" text="0/0" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="userHealth" layoutX="397.0" layoutY="283.0" prefHeight="17.0" prefWidth="66.0" text="0/0" textAlignment="CENTER" textFill="WHITE" />
+      <HBox fx:id="labelBox" layoutX="64.0" layoutY="427.0" prefHeight="17.0" prefWidth="492.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="123.0" text="Label" visible="false" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="123.0" text="Label" visible="false" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="123.0" text="Label" visible="false" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="123.0" text="Label" visible="false" />
+         </children>
+      </HBox>
+      <Label fx:id="oppStatusLabel" layoutX="137.0" layoutY="168.0" prefHeight="17.0" prefWidth="32.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Font" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="userStatusLabel" layoutX="448.0" layoutY="275.0" text="Label" textFill="WHITE" />
+      <VBox fx:id="chatBox" alignment="BOTTOM_CENTER" layoutX="678.0" layoutY="1.0" prefHeight="474.0" prefWidth="257.0" />
+      <ImageView fx:id="pokeball1" fitHeight="26.0" fitWidth="28.0" layoutX="576.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokeball2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pokeball3" fitHeight="26.0" fitWidth="28.0" layoutX="618.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokeball2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pokeball2" fitHeight="26.0" fitWidth="28.0" layoutX="597.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokeball2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pokeball6" fitHeight="26.0" fitWidth="28.0" layoutX="618.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokeball2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pokeball5" fitHeight="26.0" fitWidth="28.0" layoutX="597.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokeball2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pokeball4" fitHeight="26.0" fitWidth="28.0" layoutX="576.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokeball2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greyball1" fitHeight="26.0" fitWidth="24.0" layoutX="574.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/greyball.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greyball2" fitHeight="26.0" fitWidth="24.0" layoutX="598.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/greyball.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greyball3" fitHeight="26.0" fitWidth="24.0" layoutX="622.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/greyball.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greyball4" fitHeight="26.0" fitWidth="24.0" layoutX="575.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/greyball.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greyball6" fitHeight="26.0" fitWidth="24.0" layoutX="621.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/greyball.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greyball5" fitHeight="26.0" fitWidth="24.0" layoutX="597.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/greyball.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="17.0" prefWidth="80.0" visible="false">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/backArrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

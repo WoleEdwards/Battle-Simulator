@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BattleDemoController">
+   <children>
+      <MediaView fx:id="battleMediaView" fitHeight="330.0" fitWidth="530.0" layoutX="35.0" layoutY="35.0" />
+      <Label layoutX="161.0" layoutY="14.0" text="Switch monsters using the buttons at the top">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="367.0" text="Choose a move using the buttons at the bottom">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="50.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchToHelpScreen" text="Back" />
+   </children>
+</AnchorPane>

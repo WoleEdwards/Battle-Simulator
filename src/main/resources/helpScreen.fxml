@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="helpController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fx:id="helpImage" fitHeight="273.0" fitWidth="378.0" layoutX="116.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/homeScreenshot.png" />
+               </image></ImageView>
+        <Label fx:id="text1" alignment="CENTER" layoutX="414.0" layoutY="113.0" style="&#10;" text="Login/View Account Info" textAlignment="CENTER" textFill="#2ec731" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Label layoutX="21.0" layoutY="14.0" prefHeight="46.0" prefWidth="598.0" text="Navigating Pocket Monster Crisis">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="helpBackButton" layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#previousPage" prefHeight="25.0" prefWidth="57.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/backArrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="text2" alignment="CENTER" layoutX="365.0" layoutY="380.0" style="&#10;" text="Create your own Pocket Monster Team" textAlignment="CENTER" textFill="#d305f7" wrapText="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="text4" alignment="CENTER" layoutX="28.0" layoutY="174.0" style="&#10;" text="Switch between game modes" textAlignment="CENTER" textFill="#00e1ff" wrapText="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text3" alignment="CENTER" layoutX="63.0" layoutY="337.0" prefHeight="41.0" prefWidth="321.0" style="&#10;" text="Switch between your own team or a randomly created one" textAlignment="CENTER" textFill="#ff7700" wrapText="false" />
+            <ImageView fx:id="arrow1" fitHeight="34.0" fitWidth="32.0" layoutX="496.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" rotate="35.5">
+               <image>
+                  <Image url="@images/backArrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="arrow2" fitHeight="34.0" fitWidth="32.0" layoutX="456.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" rotate="69.2">
+               <image>
+                  <Image url="@images/backArrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="arrow3" fitHeight="34.0" fitWidth="32.0" layoutX="257.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" rotate="137.6">
+               <image>
+                  <Image url="@images/backArrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="arrow4" fitHeight="34.0" fitWidth="32.0" layoutX="242.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" rotate="-135.0">
+               <image>
+                  <Image url="@images/backArrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="arrow5" fitHeight="34.0" fitWidth="32.0" layoutX="211.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" rotate="-178.4">
+               <image>
+                  <Image url="@images/backArrow.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="text5" alignment="CENTER" layoutX="28.0" layoutY="245.0" style="&#10;" text="Get straight to the battle!" textAlignment="CENTER" textFill="RED" wrapText="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="moreInfoButton" layoutX="534.0" layoutY="207.0" mnemonicParsing="false" onAction="#nextAnimation" prefHeight="25.0" prefWidth="70.0" text="More Info" />
+            <Button layoutX="509.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchToBattleDemo" text="Battle Demo Video" />
+            <Button layoutX="495.0" layoutY="291.0" mnemonicParsing="false" onAction="#switchToTeamBuildDemo" text="Team Build Demo Video" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
