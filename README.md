@@ -1,8 +1,8 @@
-<b><u>Battle Simulator <u><b>
+#Battle Simulator
 
-This was a project made to simulate pokemon battles using javafx and scene builder
+<h2>This was a project made to simulate pokemon battles using javafx and scene builder</h2>
 
-<u>Features<u>
+<h2><u>Features</u></h2>
 - Random Team Creation
 - Custom Team Creation
 - Account Creation and Data saving
